@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI News — Noticias de IA</title>
+  <meta name="description" content="Noticias breves y curadas sobre inteligencia artificial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>🧠 AI News</h1>
+    <div class="header-actions">
+      <input id="search" type="search" placeholder="Buscar noticias…" aria-label="Buscar noticias">
+      <button id="add-sample" title="Cargar ejemplos">Cargar demo</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="news-list" class="grid" aria-live="polite">
+      <!-- Las tarjetas se renderizan con JS -->
+    </section>
+    <template id="news-card-template">
+      <article class="card">
+        <a class="card-link" target="_blank" rel="noopener" aria-label="Abrir noticia">
+          <div class="card-content">
+            <h2 class="card-title"></h2>
+            <p class="card-desc"></p>
+            <div class="card-meta">
+              <span class="source"></span>
+              <time class="date"></time>
+            </div>
+          </div>
+        </a>
+      </article>
+    </template>
+  </main>
+
+  <footer class="site-footer">
+    <p>Hecho con ❤️ por <a href="#" rel="author">tu equipo</a>. <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
